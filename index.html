@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>シンプルなWebサイト</title>
+  <title>Victoria Bell | 愛知県カフェ巡り</title>
 
   <style>
-    * { <img src=https://github.com/s2akura/Yukko21/blob/main/cupcake.jpg?raw=true"" alt="サンプル">
+    * {
       box-sizing: border-box;
     }
 
@@ -14,10 +14,11 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: #333;
-      background-color: #f5f5f5;
-      padding-bottom: 100px; /* 固定フッター分の余白 */
+      background-color: #f8f3f3;
+      padding-bottom: 100px;
     }
 
+    /* ヘッダー */
     header {
       background-color: #2c3e50;
       color: white;
@@ -28,27 +29,65 @@
     header h1 {
       margin: 0;
       font-size: 28px;
+      letter-spacing: 2px;
     }
 
+    /* メイン */
     main {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
+    /* 各セクション */
     section {
       background-color: white;
-      padding: 25px;
+      padding: 30px;
       margin-bottom: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
-    section h2 {
+    /* 愛知県カフェ巡り */
+    .cafe-title {
+      color: #9b5c66;
+      font-family: "Georgia", "Yu Mincho",
+                   "Hiragino Mincho ProN", serif;
+      font-size: 32px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    /* カフェタイトルの下の装飾 */
+    .cafe-title::after {
+      content: "☕";
+      display: block;
+      font-size: 18px;
+      margin-top: 10px;
+      color: #c9959d;
+    }
+
+    /* 通常の見出し */
+    section h2:not(.cafe-title) {
       color: #2c3e50;
       margin-top: 0;
     }
 
+    /* 画像 */
+    .cafe-image {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    /* フッター */
     footer {
       position: fixed;
       bottom: 0;
@@ -65,7 +104,7 @@
     }
 
     footer a {
-      color: #74b9ff;
+      color: #d9a0a8;
       text-decoration: none;
       margin: 0 8px;
     }
@@ -73,33 +112,66 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* スマートフォン対応 */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .cafe-title {
+        font-size: 26px;
+        letter-spacing: 2px;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- ヘッダー -->
   <header>
-    <h1>Victoria Bell </h1>
+    <h1>Victoria Bell</h1>
   </header>
 
+  <!-- メインコンテンツ -->
   <main>
+
+    <!-- 愛知県カフェ巡り -->
     <section>
-      <h2>愛知県の博物館</h2>
+      <h2 class="cafe-title">愛知県カフェ巡り</h2>
+
+      <img
+        class="cafe-image"
+        src="https://github.com/s2akura/Yukko21/blob/main/cupcake.jpg?raw=true"
+        alt="カフェのケーキ"
+      >
+
       <p>
-        
+        愛知県のおしゃれなカフェを巡りながら、
+        素敵なお店やおすすめのスイーツをご紹介します。
       </p>
     </section>
 
+    <!-- サービス・活動内容 -->
     <section>
       <h2>サービス・活動内容</h2>
+
       <p>
         TPO、
       </p>
     </section>
+
   </main>
 
+  <!-- フッター -->
   <footer>
     <p>お問い合わせ：example@example.com</p>
+
     <p>
       <a href="https://twitter.com/" target="_blank">X</a>
       <a href="https://www.instagram.com/" target="_blank">Instagram</a>
